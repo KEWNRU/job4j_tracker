@@ -14,13 +14,13 @@ public class Broken {
         if (obj != null) {
             System.out.println(obj);
         }
+    }
 
-        void String(int b, int c, int d, int e, int f, int g, int h) {
+    void method() {
 
             String name;
 
             new Broken();
-
-        }
     }
 }
+
