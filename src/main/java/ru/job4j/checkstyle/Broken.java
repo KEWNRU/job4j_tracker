@@ -5,7 +5,7 @@ public class Broken {
 
     private String surname;
 
-    public static final String NEW_VALUE = "";
+    private static final String NEW_VALUE = "";
 
     void echo() {
     }
@@ -15,13 +15,10 @@ public class Broken {
             System.out.println(obj);
         }
 
-
-        void method (int a, int b, int c, int d, int e, int f, int g, int h){
-
+        void method ( int a, int b, int c, int d, int e, int f, int g){
         }
 
-
-        String Name;
+        private String name;
 
         Broken() {
         }
