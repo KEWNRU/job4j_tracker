@@ -16,7 +16,7 @@ public class Broken {
         }
     }
 
-    void method() {
+    void method(int a) {
 
             String name;
 
