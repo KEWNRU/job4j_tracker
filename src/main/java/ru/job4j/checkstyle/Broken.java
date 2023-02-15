@@ -15,14 +15,7 @@ public class Broken {
             System.out.println(obj);
         }
 
-        void String {
-            int b;
-            int c;
-            int d;
-            int e;
-            int f;
-            int g;
-            int h;
+        void String(int b, int c, int d, int e, int f, int g, int h) {
 
             String name;
 
