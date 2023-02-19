@@ -6,10 +6,8 @@ public class DummyDic {
     }
 
     public static void main(String[] args) {
-
         DummyDic ivan = new DummyDic();
         String say = ivan.engToRus("GPU");
         System.out.println(say);
-
     }
 }
