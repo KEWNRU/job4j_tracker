@@ -24,10 +24,12 @@ public class Cat {
     public static void main(String[] args) {
         System.out.println("There are gav's food.");
         Cat gav = new Cat();
+        gav.giveNick("Gav");
         gav.eat("kotleta");
         gav.show();
         System.out.println("There are black's food.");
         Cat black = new Cat();
+        black.giveNick("Blac");
         black.eat("fish");
         black.show();
         System.out.println("There are TOM'S food.");
