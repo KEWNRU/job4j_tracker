@@ -11,6 +11,7 @@ public class Triangle {
         this.third = cp;
     }
 
+
     public double semiPerimeter(double a, double b, double c) {
         return (a + b + c) / 2;
     }
