@@ -17,10 +17,10 @@ public class TriangleTest {
     }
 
     @Test
-    public void when40and40and04ThenMinus1() {
-        Point a = new Point(4, 0);
-        Point b = new Point(4, 0);
-        Point c = new Point(4, 0);
+    public void when47and65and92ThenMinus1() {
+        Point a = new Point(4, 7);
+        Point b = new Point(6, 5);
+        Point c = new Point(9, 2);
         Triangle triangle = new Triangle(a, b, c);
         double rsl = triangle.area();
         double expected = -1;
