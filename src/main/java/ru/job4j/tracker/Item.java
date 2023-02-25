@@ -20,14 +20,24 @@ public class Item {
         this.name = name;
     }
 
-    public String name(String name) {
-        this.name = name;
-        return name;
+    public Item() {
     }
 
-    public String idName(int id, String name) {
+    public Item(int id) {
+        this.id = id;
+    }
+
+    public Item(int id, String name) {
         this.id = id;
         this.name = name;
-        return name;
+    }
+
+    public void printInfo() {
+        System.out.println(25 + name);
+    }
+
+    public static void main(String[] args) {
+        Item name = new Item();
+        name.printInfo();
     }
 }
