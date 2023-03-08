@@ -54,6 +54,7 @@ public class License {
                 && Objects.equals(model, license.model)
                 && Objects.equals(code, license.code)
                 && Objects.equals(created, license.created);
+
     }
 
     @Override
