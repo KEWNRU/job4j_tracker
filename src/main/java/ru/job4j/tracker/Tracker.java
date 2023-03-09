@@ -14,8 +14,15 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        int index = indexOf(id);
-        return index != -1 ? items[index] : null;
+        Item item = null;
+        for (int index = 0; index < size; index++) {
+            Item current = items[index];
+            if (current.getId() == id) {
+                item = current;
+                break;
+            }
+        }
+        return item;
     }
 
     public Item[] findAll() {
@@ -55,4 +62,13 @@ public class Tracker {
         return false;
     }
 
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size] = null;
+            size--;
+        }
+            return false;
+    }
 }
