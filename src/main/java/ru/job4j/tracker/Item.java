@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Item {
 
-    private DateTimeFormatter formatter
-            = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+
     private LocalDateTime created = LocalDateTime.now();
     private int id;
     private String name;
@@ -41,6 +41,15 @@ public class Item {
 
     public LocalDateTime getCreated() {
         return created;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{"
+                + "created=" + created
+                + ", id=" + id
+                + ", name='" + name + '\''
+                + '}';
     }
 }
 
