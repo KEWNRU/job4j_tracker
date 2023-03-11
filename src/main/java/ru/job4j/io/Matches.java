@@ -17,7 +17,8 @@ public class Matches {
             if (rsl) {
                 count -= matches;
                 System.out.println("Спичек осталось " + count);
-            } else  {
+            }
+            if (matches > 3 || matches == 0) {
                 System.out.println("Error");
                 turn = !turn;
             }
