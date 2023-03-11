@@ -9,13 +9,11 @@ public class MagicBall {
         System.out.println("Задайте вопрос.");
         String name = input.nextLine();
         int answer = new Random().nextInt(3);
-        if (answer == 1) {
-            System.out.println("Да");
-        }
-        if (answer == 2) {
-            System.out.println("Нет");
-        } else if (answer == 0) {
-            System.out.println("Может быть");
-        }
+        String value = switch (answer) {
+            case 1 -> "Yes";
+            case 2 -> "No";
+            default -> "May be";
+        };
+        System.out.println(value);
     }
 }
