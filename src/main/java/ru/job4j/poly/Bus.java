@@ -8,7 +8,7 @@ public class Bus implements Transport {
 
     @Override
     public int passenger(int x) {
-        for(int i = 0; i <= 20; i++) {
+        for (int i = 0; i <= 20; i++) {
             x += 20;
         }
         return x;
