@@ -15,6 +15,6 @@ public class DeleteItem implements UserAction {
         } else {
             System.out.println("Ошибка удаления заявки.");
         }
-        return false;
+        return true;
     }
 }

@@ -17,6 +17,6 @@ public class EditItemAction implements UserAction {
         } else {
             System.out.println("Ошибка замены заявки.");
         }
-        return false;
+        return true;
     }
 }
