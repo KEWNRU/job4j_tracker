@@ -26,7 +26,7 @@ public class StartUITest {
         String editName = "New item name";
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(item.getId()), "New item name"  , "1"}
+                new String[] {"0", String.valueOf(item.getId()), "New item name", "1"}
         );
         UserAction[] actions = {
                 new EditItemAction(out),
