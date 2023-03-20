@@ -174,6 +174,10 @@ public class StartUITest {
                         + "1. Exit Program" + ln
                         + "=== Show all items ===" + ln
                         + one + ln
+                        + "Menu:" + ln
+                        + "0. === Show all items ===" + ln
+                        + "1. Exit Program" + ln
+                        + "=== Exit Program ===" + ln
         );
     }
 }
