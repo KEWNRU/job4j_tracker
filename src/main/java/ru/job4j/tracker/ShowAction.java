@@ -24,6 +24,6 @@ public class ShowAction implements UserAction {
         } else {
             out.println("Хранилище еще не содержит заявок.");
         }
-        return false;
+        return true;
     }
 }
