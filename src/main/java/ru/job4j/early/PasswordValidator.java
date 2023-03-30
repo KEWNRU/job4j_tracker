@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class PasswordValidator {
-
+    private static final String[] FORBIDDEN = {"qwerty", "12345", "password", "admin", "user"};
     public static String validate(String password) {
         if (password == null) {
             throw new IllegalArgumentException("Password can't be null");
@@ -12,7 +12,6 @@ public class PasswordValidator {
         if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
-        String[] simples = new String[]{"qwerty", "12345", "password", "admin", "user"};
         char[] pass = password.toCharArray();
         boolean upper = false;
         boolean lower = false;
@@ -36,7 +35,7 @@ public class PasswordValidator {
                 break;
             }
         }
-        for (String s : simples) {
+        for (String s : FORBIDDEN) {
             String lowerPass = password.toLowerCase();
             if (lowerPass.contains(s)) {
                 simple = false;
