@@ -19,12 +19,12 @@ public final class Airbus extends Aircraft {
 
     @Override
     public void printModel() {
-        System.out.println("Модель самолета: " + name);
+        System.out.println("\n" + "Airplane model: " + name);
     }
 
     public void printCountEngine() {
         int engine = "A380".equals(name) ? 4 : COUNT_ENGINE;
-        System.out.println("Количество двигателей равно: " + engine);
+        System.out.println("The number of engines is: " + engine);
     }
 
     @Override
