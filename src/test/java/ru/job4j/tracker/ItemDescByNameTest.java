@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ItemDescByNameTest {
@@ -23,7 +22,7 @@ class ItemDescByNameTest {
                 new Item("a")
         );
         items.sort(new ItemDescByName());
-        assertEquals(items.toString(), expected.toString());
+        assertEquals(items.toString(),expected.toString());
 
     }
 }
