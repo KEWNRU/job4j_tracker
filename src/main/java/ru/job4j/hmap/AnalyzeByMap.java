@@ -16,9 +16,9 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
+        List<Label> list = new ArrayList<>();
         int i = 0;
         double rsl = 0;
-        List<Label> list = new ArrayList<>();
         for (Pupil key : pupils) {
             for (Subject subject : key.subjects()) {
                 rsl += subject.score();
@@ -42,7 +42,7 @@ public class AnalyzeByMap {
         }
         List<Label> lists = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : list.entrySet()) {
-            lists.add(new Label(entry.getKey(), entry.getValue() / pupils.size()));
+            lists.add(new Label(entry.getKey(), (double) entry.getValue() / pupils.size()));
         }
         return lists;
     }
@@ -68,11 +68,11 @@ public class AnalyzeByMap {
                 int score = list.getOrDefault(subject.name(), 0) + subject.score();
                 list.put(subject.name(), score);
             }
-            for (Map.Entry<String, Integer> entry : list.entrySet()) {
-                lists.add(new Label(entry.getKey(), entry.getValue()));
-            }
-            lists.sort(Comparator.naturalOrder());
         }
+        for (Map.Entry<String, Integer> entry : list.entrySet()) {
+            lists.add(new Label(entry.getKey(), entry.getValue()));
+        }
+        lists.sort(Comparator.naturalOrder());
         return lists.get(lists.size() - 1);
     }
 }
