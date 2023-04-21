@@ -7,10 +7,11 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class ItemDescByNameTest {
 
     @Test
-    void ItemDescByName() {
+    void itemDescByName() {
         List<Item> items = Arrays.asList(
                 new Item("a"),
                 new Item("c"),
@@ -22,7 +23,7 @@ class ItemDescByNameTest {
                 new Item("a")
         );
         items.sort(new ItemDescByName());
-        assertEquals(items.toString(),expected.toString());
+        assertEquals(items.toString(), expected.toString());
 
     }
 }
