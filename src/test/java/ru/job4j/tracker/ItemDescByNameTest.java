@@ -22,7 +22,7 @@ class ItemDescByNameTest {
                 new Item("a")
         );
         items.sort(new ItemDescByName());
-        assertEquals(items, expected);
+        assertEquals(items.toString(), expected.toString());
 
     }
 }
