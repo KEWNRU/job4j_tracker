@@ -17,17 +17,14 @@ public class AnalyzeByMap {
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
         List<Label> list = new ArrayList<>();
-        int i = 0;
-        double rsl = 0;
         for (Pupil key : pupils) {
+            int i = 0;
+            double rsl = 0;
             for (Subject subject : key.subjects()) {
                 rsl += subject.score();
                 i++;
             }
             list.add(new Label(key.name(), rsl / i));
-            rsl = 0;
-            i = 0;
-
         }
         return list;
     }
