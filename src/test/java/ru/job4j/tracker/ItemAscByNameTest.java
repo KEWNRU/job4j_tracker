@@ -23,6 +23,6 @@ class ItemAscByNameTest {
                 new Item("test 3")
         );
         items.sort(new ItemAscByName());
-        assertEquals(items.toString(), expected.toString());
+        assertEquals(items, expected);
     }
 }
