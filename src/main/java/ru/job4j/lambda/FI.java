@@ -17,9 +17,9 @@ public class FI {
             }
         };
         Arrays.sort(atts, comparator);
-        Comparator<String> cmpSize = (left, right) -> Integer.compare(right.length(), left.length());
+        Comparator<String> cmpDescSize = (left, right) -> Integer.compare(right.length(), left.length());
         Comparator<String> cmpText = (left, right) -> left.compareTo(right);
-        Comparator<String> cmpDescSize = (left, right) -> Integer.compare(left.length(), right.length());
+        Comparator<String> cmpSize = (left, right) -> Integer.compare(left.length(), right.length());
 
     }
 }
