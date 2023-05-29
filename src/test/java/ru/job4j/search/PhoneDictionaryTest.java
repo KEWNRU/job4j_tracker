@@ -16,6 +16,7 @@ public class PhoneDictionaryTest {
         ArrayList<Person> persons = phones.find("Ivan");
         assertThat(persons.isEmpty()).isTrue();
     }
+
     @Test
     public void whenFindByName() {
         PhoneDictionary phones = new PhoneDictionary();
