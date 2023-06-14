@@ -24,7 +24,6 @@ public class Car {
                 + '}';
     }
 
-
     static class Builder {
         private String brand;
         private String model;
@@ -77,5 +76,14 @@ public class Car {
                 .buildColor("Red")
                 .build();
         System.out.println(car);
+
+        Car volvo = new Builder()
+                .buildBrand("Volvo")
+                .buildModel("F10")
+                .buildCreated(LocalDate.of(1994, 3, 2))
+                .buildVolume(2.5)
+                .buildColor("Green")
+                .build();
+        System.out.println(volvo);
     }
 }
