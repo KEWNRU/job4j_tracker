@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ShowAction implements UserAction {
@@ -12,13 +13,13 @@ public class ShowAction implements UserAction {
 
     @Override
     public String name() {
-        return "=== Show all items ===";
+        return "Вывод всех элементов";
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Show all items ===");
-        List<Item> items = tracker.findAll();
+    public boolean execute(Input input, Store store) throws SQLException {
+        out.println("Вывод всех элементов");
+        List<Item> items = store.findAll();
         if (items.size() > 0) {
             for (Item item : items) {
                 out.println(item);

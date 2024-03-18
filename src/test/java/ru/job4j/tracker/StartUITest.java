@@ -2,18 +2,19 @@ package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StartUITest {
     @Test
-    public void whenCreateItem() {
+    public void whenCreateItem() throws SQLException {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"0", "Item name", "1"}
         );
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         UserAction[] actions = {
                 new CreateAction(out),
                 new ExitAction(out)
@@ -23,8 +24,8 @@ public class StartUITest {
     }
 
     @Test
-    public void whenReplaceItem() {
-        Tracker tracker = new Tracker();
+    public void whenReplaceItem() throws SQLException {
+        MemTracker tracker = new MemTracker();
         Item item = tracker.add(new Item("Replaced item"));
         String editName = "New item name";
         Output out = new StubOutput();
@@ -40,8 +41,8 @@ public class StartUITest {
     }
 
     @Test
-    public void whenDeleteItem() {
-        Tracker tracker = new Tracker();
+    public void whenDeleteItem() throws SQLException {
+        MemTracker tracker = new MemTracker();
         Item item = tracker.add(new Item("Deleted item"));
         Output out = new StubOutput();
         Input in = new StubInput(
@@ -56,12 +57,12 @@ public class StartUITest {
     }
 
     @Test
-    public void whenExit() {
+    public void whenExit() throws SQLException {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"0"}
         );
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         UserAction[] actions = {
                 new ExitAction(out)
         };
@@ -75,9 +76,9 @@ public class StartUITest {
     }
 
     @Test
-    public void whenReplaceItemTestOutputIsSuccessfully() {
+    public void whenReplaceItemTestOutputIsSuccessfully() throws SQLException {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         String replaceName = "New Test Name";
         Input in = new StubInput(
@@ -103,9 +104,9 @@ public class StartUITest {
     }
 
     @Test
-    public void whenFindByNameAction() {
+    public void whenFindByNameAction() throws SQLException {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
                 new String[]{"0", one.getName(), "1"}
@@ -130,9 +131,9 @@ public class StartUITest {
     }
 
     @Test
-    public void whenFindByIdAction() {
+    public void whenFindByIdAction() throws SQLException {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), "1"}
@@ -157,9 +158,9 @@ public class StartUITest {
     }
 
     @Test
-    public void whenFindAllAction() {
+    public void whenFindAllAction() throws SQLException {
         Output out = new StubOutput();
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         Item one = tracker.add(new Item("test1"));
         Input in = new StubInput(
                 new String[]{"0", String.valueOf(one.getId()), "1"}
@@ -184,12 +185,12 @@ public class StartUITest {
     }
 
     @Test
-    public void whenInvalidExit() {
+    public void whenInvalidExit() throws SQLException {
         Output out = new StubOutput();
         Input in = new StubInput(
                 new String[]{"1", "0"}
         );
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         UserAction[] actions = new UserAction[]{
                 new ExitAction(out)
         };

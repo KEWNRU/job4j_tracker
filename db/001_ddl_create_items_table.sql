@@ -3,3 +3,5 @@ create table items (
     name text,
     created timestamp
 );
+
+select * from items
