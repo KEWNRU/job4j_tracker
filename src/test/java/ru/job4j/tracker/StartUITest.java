@@ -70,8 +70,8 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Выход" + ln
+                        + "Выход" + ln
         );
     }
 
@@ -92,14 +92,14 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. Edit item" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Edit item ===" + ln
+                        + "0. Редактирование" + ln
+                        + "1. Выход" + ln
+                        + "Редактирование" + ln
                         + "Заявка изменена успешно." + ln
                         + "Menu:" + ln
-                        + "0. Edit item" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Редактирование" + ln
+                        + "1. Выход" + ln
+                        + "Выход" + ln
         );
     }
 
@@ -119,14 +119,14 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. === Find items by name ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Find items by name ===" + ln
+                        + "0. Поиск по имени" + ln
+                        + "1. Выход" + ln
+                        + "Поиск по имени" + ln
                         + one + ln
                         + "Menu:" + ln
-                        + "0. === Find items by name ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Поиск по имени" + ln
+                        + "1. Выход" + ln
+                        + "Выход" + ln
         );
     }
 
@@ -146,14 +146,14 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. === Find item by id ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Find item by id ===" + ln
+                        + "0. Поиск по id" + ln
+                        + "1. Выход" + ln
+                        + "Поиск по id" + ln
                         + one + ln
                         + "Menu:" + ln
-                        + "0. === Find item by id ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Поиск по id" + ln
+                        + "1. Выход" + ln
+                        + "Выход" + ln
         );
     }
 
@@ -173,14 +173,14 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. === Show all items ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Show all items ===" + ln
+                        + "0. Вывод всех элементов" + ln
+                        + "1. Выход" + ln
+                        + "Вывод всех элементов" + ln
                         + one + ln
                         + "Menu:" + ln
-                        + "0. === Show all items ===" + ln
-                        + "1. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Вывод всех элементов" + ln
+                        + "1. Выход" + ln
+                        + "Выход" + ln
         );
     }
 
@@ -198,11 +198,11 @@ public class StartUITest {
         String ln = System.lineSeparator();
         assertThat(out.toString()).isEqualTo(
                 "Menu:" + ln
-                        + "0. Exit Program" + ln
+                        + "0. Выход" + ln
                         + "Wrong input, you can select: 0 .. 0" + ln
                         + "Menu:" + ln
-                        + "0. Exit Program" + ln
-                        + "=== Exit Program ===" + ln
+                        + "0. Выход" + ln
+                        + "Выход" + ln
         );
     }
 }
