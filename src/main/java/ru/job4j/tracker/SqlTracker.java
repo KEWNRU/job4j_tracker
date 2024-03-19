@@ -70,12 +70,11 @@ public class SqlTracker implements Store {
     }
 
     @Override
-    public boolean delete(int id) throws SQLException {
+    public void delete(int id) throws SQLException {
         try (PreparedStatement statement = connection.prepareStatement("delete from items where id = ?")) {
             statement.setInt(1, id);
             statement.executeUpdate();
         }
-        return false;
     }
 
     @Override
