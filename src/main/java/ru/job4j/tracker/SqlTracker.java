@@ -31,6 +31,7 @@ public class SqlTracker implements Store {
         } catch (Exception e) {
             throw new IllegalStateException(e);
         }
+
     }
 
     @Override
