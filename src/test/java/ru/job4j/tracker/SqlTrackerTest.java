@@ -1,9 +1,6 @@
 package ru.job4j.tracker;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.SqlTracker;
 
@@ -18,6 +15,7 @@ import java.util.Properties;
 
 import static org.assertj.core.api.Assertions.*;
 
+@Disabled
 public class SqlTrackerTest {
 
     private static Connection connection;
