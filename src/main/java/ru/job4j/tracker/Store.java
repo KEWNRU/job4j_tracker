@@ -1,19 +1,20 @@
 package ru.job4j.tracker;
 
-import java.sql.SQLException;
 import java.util.List;
 
-public interface Store extends AutoCloseable {
+public interface Store {
+    void close();
 
-    Item add(Item item) throws SQLException;
+    Item add(Item item);
 
-    boolean replace(int id, Item item) throws SQLException;
+    boolean replace(Integer id, Item item);
 
-    void delete(int id) throws SQLException;
+    boolean delete(Integer id);
 
-    List<Item> findAll() throws SQLException;
+    List<Item> findAll();
 
-    List<Item> findByName(String key) throws SQLException;
+    List<Item> findByName(String key);
 
-    Item findById(int id) throws SQLException;
+    Item findById(Integer id);
+
 }
