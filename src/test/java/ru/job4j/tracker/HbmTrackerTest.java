@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class HbmTrackerTest {
     @Test
-    public void whenAddNewItemThenTrackerHasSameItem() throws Exception {
+    public void whenAddNewItemThenTrackerHasSameItem() {
         try (var tracker = new HbmTracker()) {
             Item item = new Item();
             item.setName("test1");
@@ -18,7 +18,7 @@ public class HbmTrackerTest {
     }
 
     @Test
-    public void whenItemFindById() throws Exception {
+    public void whenItemFindById() {
         try (var tracker = new HbmTracker()) {
             Item item = new Item();
             item.setName("test1");
@@ -29,7 +29,7 @@ public class HbmTrackerTest {
     }
 
     @Test
-    public void whenDeleteItemThenTracker() throws Exception {
+    public void whenDeleteItemThenTracker() {
         try (var tracker = new HbmTracker()) {
             Item item = new Item();
             item.setName("test1");
